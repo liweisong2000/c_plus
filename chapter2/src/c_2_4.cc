@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int calculate(int);
+int calculate(int age);
 int main()
 {
   int age;

@@ -1,21 +1,21 @@
 #include<iostream>
-void get_time(int i,int j);
+using namespace std;
+
+void get_time(int hours,int minutes);
 
 int main()
 {
-  using namespace std;
-  int hou;
-  int min;
+  int hours;
+  int minutes;
   cout<<"Enter the number of hours:";
-  cin>>hou;
+  cin>>hours;
   cout<<"Enter the number of minutes:";
-  cin>>min;
-  get_time(hou,min);
+  cin>>minutes;
+  get_time(hours,minutes);
   return 0;
 }
 
-void get_time(int i,int j)
+void get_time(int hours,int minutes)
 {
-  using namespace std;
-  cout <<"Time:"<<i<<":"<<j<<endl;
+  cout <<"Time:"<<hours<<":"<<minutes<<endl;
 }
