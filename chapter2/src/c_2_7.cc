@@ -2,7 +2,6 @@
 using namespace std;
 
 void get_time(int hours,int minutes);
-
 int main()
 {
   int hours;

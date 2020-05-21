@@ -1,8 +1,9 @@
 #include<iostream>
+using namespace std;
+
 double Fahrenheit(int ces);
 int main()
 {
-  using namespace std;
   cout <<"Please enter a Celsius value:";
   int cel;
   cin>>cel;

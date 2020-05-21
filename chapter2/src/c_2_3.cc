@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 int first();
 int second();
 int main()
@@ -8,7 +9,7 @@ int main()
   first();
   second();
   second();
-
+  return 0;
 }
 
 int first()

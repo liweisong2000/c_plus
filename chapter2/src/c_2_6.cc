@@ -1,8 +1,9 @@
 #include<iostream>
+using namespace std;
+
 double astronomical(double uns);
 int main()
 {
-  using namespace std;
   double light;
   cout <<"Enter the number of light years:";
   cin>>light;
