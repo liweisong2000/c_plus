@@ -1,20 +1,23 @@
 #include<iostream>
 using namespace std;
+
 int main()
 {
   double inch;
-  double foot;
+  double  foot;
   double pound;
-  cout << "Please enter your height:inch:";
+  cout << "Please enter your height:" <<endl;
+  cout << "inch ";
   cin >> inch;
-  cout << "foot:";
+  cout << "foot ";
   cin >> foot;
-  cout << "Please enter your weight:pound:"
+  cout << "Please enter your weight:" << endl;
+  cout <<"pound " ;
   cin >> pound;
-  const double heightm = 0.0254;
-  const double weightkg = 1/2.2;
-  cout << "Your BMI is:" << weightkg*/(height*height) <<endl;
-
+  const double height = 0.0254*0.0254*inch*inch;
+  const double weight = pound/2.2;
+  cout << "Your BMI is:" << weight/height << "kg/(m*m)" << endl;
+  return 0;
 
   
 }
