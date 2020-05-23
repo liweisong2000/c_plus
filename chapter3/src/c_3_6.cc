@@ -1,9 +1,9 @@
 #include<iostream>
-using namespace std ;
+using namespace std;
  
 int main()
 {
- double mile ;
+ double mile;
  double gallon ;
  cout << "Please enter driving mileage (mile) :" ;
  cin >> mile ;
