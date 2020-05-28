@@ -3,10 +3,10 @@ using namespace std;
 
 int main()
 {
- int degrees;
- int minutes;
- int seconds;
- const  double transform = 37.8553;
+ float degrees;
+ float minutes;
+ float seconds;
+ float change=60;
  cout << "Enter a latitude in degrees , minutes , and seconds: " << endl;
  cout << "First , enter the degrees: ";
  cin >> degrees;
@@ -17,6 +17,11 @@ int main()
  const int degree = degrees;
  const int minute = minutes;
  const int second = seconds;
- cout << degree << " degrees" << minute << " minutes, " << second <<  " seconds = " << transform << " degrees" <<endl; 
+ float transforms = degrees+(minutes/change)+(seconds/(change*change ));
+ const double transform = transforms;
+ cout << degree << " degrees ";
+ cout << minute << " minutes, ";
+ cout << second <<  " seconds = ";
+ cout << transform << endl;
  return 0;
 }
