@@ -6,6 +6,9 @@ int main()
   double foot;
   double inch;
   double pound;
+  double unit;
+  double squareheight;
+  double weight;
   const int changefoot = 12;
   const float changeinch = 0.0254;
   const float changekilo = 2.2;
@@ -17,9 +20,9 @@ int main()
   cout << "Please enter your weight(pound):" << endl;
   cin >> pound;
   cout << "pound" << endl;
-  double unit = foot * changefoot + inch;
-  double height = changeinch * changeinch * unit * unit;
-  double weight = pound / changekilo;
-  cout << "Your BMI is:" << weight/height << "kg/sq.m" << endl;
+  unit = foot * changefoot + inch;
+  squareheight = changeinch * changeinch * unit * unit;
+  weight = pound / changekilo;
+  cout << "Your BMI is:" << weight/squareheight << "kg/sq.m" << endl;
   return 0;
 }

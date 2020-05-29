@@ -6,6 +6,7 @@ int main()
  float degrees;
  float minutes;
  float seconds;
+ float transforms;
  const float change = 60;
  cout << "Enter a latitude in degrees , minutes , and seconds: " << endl;
  cout << "First , enter the degrees: ";
@@ -14,7 +15,7 @@ int main()
  cin >> minutes;
  cout << "Finally ,enter the seconds of arc: ";
  cin >> seconds;
- float transforms = degrees + (minutes / change) + (seconds / (change*change));
+ transforms = degrees + (minutes / change) + (seconds / (change*change));
  cout << degrees << " degrees ";
  cout << minutes << " minutes, ";
  cout << seconds <<  " seconds = ";
