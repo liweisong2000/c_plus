@@ -15,7 +15,7 @@ int main()
  cin >> minutes;
  cout << "Finally ,enter the seconds of arc: ";
  cin >> seconds;
- transforms = degrees + (minutes / change) + (seconds / (change*change));
+ transforms = degrees + (minutes / change) + (seconds / (change * change));
  cout << degrees << " degrees ";
  cout << minutes << " minutes, ";
  cout << seconds <<  " seconds = ";

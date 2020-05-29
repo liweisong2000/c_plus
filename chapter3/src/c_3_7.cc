@@ -6,7 +6,7 @@ int main()
  double litre;
  double mile;
  const double miles = 62.14;
- const double litres= 3.875;
+ const double litres = 3.875;
  cout << "Please enter car exhausted oil (each 100 kilometer exhausted oil litres) : "; 
  cin >> litre;
  mile = (miles * litres) / litre;

@@ -23,6 +23,6 @@ int main()
   unit = foot * changefoot + inch;
   squareheight = changeinch * changeinch * unit * unit;
   weight = pound / changekilo;
-  cout << "Your BMI is:" << weight/squareheight << "kg/sq.m" << endl;
+  cout << "Your BMI is:" << weight / squareheight << "kg/sq.m" << endl;
   return 0;
 }
