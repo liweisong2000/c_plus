@@ -10,10 +10,11 @@ int main()
  cout << "Please enter the second integer: ";
  cin >> num2;
 
- for(;num1<=num2;++num1)
- {
-   sum1 += num1;
- }
+  for(;num1<=num2;++num1)
+   {
+    sum1 += num1;
+   }
+
  cout << "The sum of integer1 plus to integer2 is: " << sum1 << endl;
  return 0;
 }

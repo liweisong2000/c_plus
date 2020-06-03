@@ -10,22 +10,20 @@ int main()
  cout << "Enter number of rows: ";
  cin >> row;
 
- for(i=1;i<=row;++i)
- {
-
-  for(j=1;j<=(row-i);++j)
-  {
-   cout << period;
-  }
+  for(i=1;i<=row;++i)
+   {
+    for(j=1;j<=(row-i);++j)
+     {
+      cout << period;
+     }
   
-  for(j=1;j<=i;++j)
-  {
-  cout << star;
-  }
+    for(j=1;j<=i;++j)
+     {
+      cout << star;
+     }
   
-  cout << endl;
- 
- }
+    cout << endl;
+   }
  return 0;
 
 }
