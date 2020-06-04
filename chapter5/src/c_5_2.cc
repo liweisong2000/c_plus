@@ -1,20 +1,25 @@
 #include<iostream>
 #include<array>
+#include<cmath>
 using namespace std;
 
 int main()
 {
- int i;
- array<long double,100> factorials;
- factorials[1] = factorials[0] = 1;
+ const int i = 1;
+ int j;
+ array<long double,101> factorials;
 
-  for(i=2;i<=100;++i)
+  for(j = 0;j < 1;)
+  {
+   factorials[j] = pow(i,j);
+   for(j = 1;j <= 100; ++j)
    {
-    factorials[i] = i * factorials[i-1];
+    factorials[j] = j * factorials[j - 1];
    }
+  }
 
- i=i-1;
- cout << i  << "! = " << factorials[i] << endl;
+ j = j - 1;
+ cout << j  << "! = " << factorials[j] << endl;
  return 0;
 }
 

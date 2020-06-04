@@ -3,7 +3,6 @@ using namespace std;
 
 int main()
 {
- int i;
  int sum = 0;
  int sales[12]; 
  const char * month [12] =
@@ -23,10 +22,10 @@ int main()
   };
  cout << "Please enter the sales'number of 《C++ For Fools》each month: " << endl;
   
-  for(i=0;i<12;++i)
+  for(int i = 0;i < 12; ++i)
    {
     cout << month [i];
-    cin >> sales[i];
+    cin >> sales[i],cin.clear(),cin.sync();
     sum += sales[i];
    }
 

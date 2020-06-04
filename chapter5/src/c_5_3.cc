@@ -4,9 +4,9 @@ using namespace std;
 int main()
 {
  signed int num;
- signed int sum=0;
+ signed int sum = 0;
  cout << "Please enter the number to caculate: ";
- cin >> num;
+ cin >> num,cin.clear(),cin.sync();
 
   for(;num;)
    {

@@ -3,18 +3,22 @@ using namespace std;
 
 int main()
 {
- int sum1 = 0;
- int num1,num2;
- cout << "Please enter the first integer: ";
- cin >> num1;
- cout << "Please enter the second integer: ";
- cin >> num2;
+  int i,j;
+  int sum = 0;
+  int num[2];
+  cout << "Please enter the first integer: ";
+  cin >> num[0],cin.clear(),cin.sync();
+  cout << "Please enter the second integer: ";
+  cin >> num[1];
+  i = num[0] < num[1] ? num[0] : num[1];
+  j = num[0] > num[1] ? num[0] : num[1];
+  
+  for(;i <= j; ++i)
+  {
+   sum += i;
+  }
 
-  for(;num1<=num2;++num1)
-   {
-    sum1 += num1;
-   }
-
- cout << "The sum of integer1 plus to integer2 is: " << sum1 << endl;
- return 0;
+  cout << "The sum of integer1 plus to integer2 is: " << sum << endl;
+  return 0;
 }
+
