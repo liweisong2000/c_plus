@@ -1,13 +1,20 @@
 #include<iostream>
 using namespace std;
 
+struct sale
+{
+ int sales[12];
+ int year;
+ int sum;
+};
+
 int main()
 {
- int sum[3] = {0,0,0};
- int sums = 0;
- int sales[3][12];
- int year[3];
  int i,j = 0;
+ int sums = 0;
+ int num;
+ sale * p = new sale[num];
+ 
  const char * month [12] = 
  {
   "January is: ",
@@ -23,26 +30,29 @@ int main()
   "November is: ",
   "December is: "
  };
-
-  for(i = 0;i < 3; ++i)
-   { 
-    cout << "Please write down the year you want to enter the data(like 2020): ";
-    cin >> year[i],cin.clear(),cin.sync();
-    cout << "Please enter the sales' number of 《C++ For Fools》each month: " << endl;
+ 
+ cout << "How many years do you want to catalog: ";
+ cin >> num;
+  for(i = 0;i < num; ++i)
+  { 
+   cout << "Year #";
+   cin >> p[i].year,cin.clear(),cin.sync();
+   cout << ": ";
+   cout << "Please enter the sales' number of 《C++ For Fools》each month: " << endl;
    
-    for(j = 0;j < 12; ++j)
-     {
-      cout << month[j];
-      cin >> sales[i][j],cin.clear(),cin.sync();
-      sum[i] += sales[i][j];
-     }
-
-    cout << "The sales in " << year[i] << " is: " << sum[i] << endl;
+   for(j = 0;j < 12; ++j)
+   {
+    cout << month[j];
+    cin >> p[i].sales[j],cin.clear(),cin.sync();
+    p[i].sum += p[i].sales[j];
    }
+
+   cout << "The sales in " << p[i].year << " is: " << p[i].sum << endl;
+  }
 
   for(i = 0;i < 3; ++i)
   {
-   sums += sum[i];
+   sums += p[i].sum;
   }
  cout << "The sales of three years is: " << sums << endl;
 return 0;
