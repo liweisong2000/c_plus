@@ -21,15 +21,12 @@ int main()
    "December is: "
   };
  cout << "Please enter the sales'number of 《C++ For Fools》each month: " << endl;
-  
   for(int i = 0;i < 12; ++i)
-   {
-    cout << month [i];
-    cin >> sales[i],cin.clear(),cin.sync();
-    sum += sales[i];
-   }
-
-  cout << endl;
-  cout << "The sales in this year is: " << sum << endl;
-  return 0;
+  {
+   cout << month [i];
+   cin >> sales[i],cin.get();
+   sum += sales[i];
+  }
+ cout << "The sales in this year is: " << sum << endl;
+ return 0;
 }

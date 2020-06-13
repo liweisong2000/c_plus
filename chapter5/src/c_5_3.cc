@@ -5,19 +5,16 @@ int main()
 {
  signed int num;
  signed int sum = 0;
- cout << "Please enter the number to caculate: ";
- cin >> num,cin.clear(),cin.sync();
-
-  for(;num;)
-   {
-    sum += num;
-    cout << "Up to now the caculate is:  ";
-    cout << sum << endl << endl;
-    cout << "Do you want you caculate next number?" << endl;
-    cout << "If yes, enter next number, otherwise enter zero: ";
-    cin >> num;
-   }
-
+  do
+  {
+   cout << "Please enter the number to add, " << endl;
+   cout << "otherwise enter zero to end the operation: ";
+   cin >> num,cin.get();
+   sum += num;
+   cout << "Up to now the sum is: ";
+   cout << sum << endl << endl;
+  }
+  while(num);
  return 0;
 }
 

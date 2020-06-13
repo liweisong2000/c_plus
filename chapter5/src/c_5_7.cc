@@ -10,27 +10,22 @@ struct car
 
 int main()
 {
- int i;
+ int i,num;
  int k = 0; 
- int num;
- car *p = new car[num];
+ car * p = new car[num];
  cout << "How many cars do you wish to catalog? ";
- cin >> num,cin.clear(),cin.sync();
-
+ cin >> num,cin.get();
   for(i = 0;i < num; ++i)
-   { 
-    cout << "Car #" << ++k << ":" << endl;
-    cout << "Please enter the make: ";
-    cin.get(),cin.getline(p[i].producer,20),cin.clear(),cin.sync();
-    cout << "Please enter the year made: ";
-    cin >> p[i].produceyear,cin.clear(),cin.sync();
-   }
-
+  { 
+   cout << "Car #" << ++k << ":" << endl;
+   cout << "Please enter the make: ";
+   cin.getline(p[i].producer,20);
+   cout << "Please enter the year made: ";
+   cin >> p[i].produceyear,cin.get();
+  }
  cout << "Here is your collection: " << endl;
   for(i = 0;i < num; ++i)
-   {
-    cout << p[i].produceyear << " " <<  p[i].producer << endl;
-   }
+   cout << p[i].produceyear << " " <<  p[i].producer << endl;
  delete []p;
  return 0;
 }
