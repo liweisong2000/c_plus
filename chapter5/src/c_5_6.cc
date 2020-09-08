@@ -1,53 +1,37 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main()
-{
-  const char * month [12] = 
-  {
-    "January is: ",
-    "February is: ",
-    "March is: ",
-    "April is: ",
-    "May is: ",
-    "June is: ",
-    "July is: ",
-    "August is: ",
-    "September is: ",
-    "October is: ",
-    "November is: ",
-    "December is: "
-  };
+int main() {
+  const char *month[12] = {"January",   "February", "March",    "April",
+                           "May",       "June",     "July",     "August",
+                           "September", "October",  "November", "December"};
 
   int num;
-  struct sale
-  {
-    int sales[13];
+  struct sale {
     int year;
+    int sales[13];
     int sum;
   };
-  sale * p  = new sale[num];
   cout << "How many years do you want to catalog: ";
   (cin >> num).get();
+  sale *p = new sale[num];
 
-  int mon = 0,total = 0;
-  while (num > 0)
-  { 
+  int m, total = 0;
+  for (int i = 0; i < num; ++i) {
     cout << "Year #";
-    (cin >> p[num].year).get();
-    cout << "Please enter the sales' number of 《C++ For Fools》each month: " << endl;
-    for (mon = 0;mon < 12; ++mon)
-    {
-      cout << month[mon];
-      (cin >> p[num].sales[mon]).get();
-      p[num].sum += p[num].sales[mon];
+    (cin >> p[i].year).get();
+    cout << "Please enter the sales' number of 《C++ For Fools》each month: "
+         << endl;
+    for (m = 0; m < 12; ++m) {
+      cout << month[m] << ": ";
+      (cin >> p[i].sales[m]).get();
+      p[i].sum += p[i].sales[m];
     }
 
-    cout << "The sales in " ;
-    cout << p[num].year << " is: " << p[num].sum << endl;
-    total += p[num].sum;
-    --num;
+    cout << "The sales in " << p[i].year << " is: " << p[i].sum << endl;
+    total += p[i].sum;
   }
-  cout << "The sales in these years is: " << total << endl;
+  cout << "The sales in three years is: " << total << endl;
+  delete p;
   return 0;
 }

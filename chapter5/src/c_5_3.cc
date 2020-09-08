@@ -1,21 +1,16 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main()
-{
-  signed int num;
-  signed int sum = 0;
-  do
-  {
-    cout << "Please enter the number to add, " << endl;
-    cout << "otherwise enter zero to end the operation: ";
-    (cin >> num).get();
+int main() {
+  int num;
+  int sum = 0;
+  cout << "Please enter the number to add('0' to end): ";
+  (cin >> num).get();
+  while (num) {
     sum += num;
-    cout << "Up to now the sum is: ";
-    cout << sum << endl << endl;
+    cout << "The sum is: " << sum << endl;
+    cout << "Please enter the number to add('0' to end): ";
+    (cin >> num).get();
   }
-  while (num);
   return 0;
 }
-
-
