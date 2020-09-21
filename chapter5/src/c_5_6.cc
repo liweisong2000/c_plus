@@ -9,7 +9,7 @@ int main() {
   int num;
   struct sale {
     int year;
-    int sales[13];
+    int sales[12];
     int sum;
   };
   cout << "How many years do you want to catalog: ";
@@ -31,7 +31,7 @@ int main() {
     cout << "The sales in " << p[i].year << " is: " << p[i].sum << endl;
     total += p[i].sum;
   }
-  cout << "The sales in three years is: " << total << endl;
+  cout << "The sales in these years is: " << total << endl;
   delete p;
   return 0;
 }

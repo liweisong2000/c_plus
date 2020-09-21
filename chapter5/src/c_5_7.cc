@@ -5,7 +5,7 @@ using namespace std;
 int main() {
   int num;
   struct car {
-    char producer[31];
+    char producer[30];
     int produceyear;
   };
   cout << "How many cars do you wish to catalog? ";

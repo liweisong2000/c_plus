@@ -8,8 +8,10 @@ int main() {
   (cin >> i).get();
   cout << "Please enter the second integer: ";
   (cin >> j).get();
-  for (; i <= j; ++i)
+  do {
     sum += i;
+    ++i;
+  } while (i <= j);
   cout << "The sum of integer1 plus to integer2 is: " << sum << endl;
   return 0;
 }
