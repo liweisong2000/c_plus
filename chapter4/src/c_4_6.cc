@@ -12,7 +12,7 @@ int main() {
   struct CandyBar snack[3];
   int i, j;
   for (i = 0; i < 3; ++i) {
-    for (j = 0; j < 12; ++j)
+    for (j = 0; j < 11; ++j)
       snack[i].brand[j] = j > 0 ? rand() % 26 + 'a' : rand() % 26 + 'A';
     snack[i].brand[5] = ' ';
     snack[i].brand[6] = rand() % 26 + 'A';
